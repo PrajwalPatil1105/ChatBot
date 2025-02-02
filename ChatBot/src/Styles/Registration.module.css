@@ -1,0 +1,156 @@
+.registration {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.registration h2 {
+  text-align: center;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.registration form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.registration input {
+  padding: 12px 0px 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.registration input:focus {
+  border-color: #007bff;
+  outline: none;
+  transform: scale(1.02);
+}
+
+.verification-section {
+  animation: fadeIn 0.3s ease-in;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.verification-note {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.primary-button {
+  font-family: "Poppins", sans-serif;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #666;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.google-auth {
+  width: 100%;
+  padding: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.google-auth:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .registration {
+    padding: 25px;
+    padding-bottom: 20px;
+    background: linear-gradient(135deg, #e3f2fd, #f9f9f9);
+  }
+
+  .primary-button {
+    font-size: 14px;
+  }
+
+  .google-auth {
+    font-size: 14px;
+  }
+}

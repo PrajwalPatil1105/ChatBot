@@ -1,0 +1,212 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0a2540;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.intro {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+}
+
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.main-heading {
+  font-size: 44px;
+  font-weight: 700;
+  width: 15em;
+  line-height: 55px;
+  text-align: center;
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  border-right: 2px solid rgba(75, 131, 255, 1);
+  animation: typing 3s steps(20, end), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15em;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: rgba(75, 131, 255, 1);
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+.main-heading span {
+  color: #00ff90;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.features-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.start-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #00ff90;
+  color: #0a2540;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: #00d87a;
+  transform: scale(1.05);
+}
+
+.rating {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.image-content {
+  flex: 1;
+  flex-direction: column;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+.setup-container {
+  width: 100%;
+  max-width: 800px;
+  color: #333;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.steps-indicator {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 3px solid #ddd;
+}
+
+.step.active {
+  border-color: #00ff90;
+  color: #88af9e;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .setup-container {
+    width: 90%;
+
+    padding: 20px 0px;
+  }
+  .steps-indicator {
+    flex-direction: column;
+  }
+  .step {
+    flex: none;
+    width: 94%;
+    margin-bottom: 10px;
+  }
+  .step:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .main-heading {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 15em;
+    }
+  }
+
+  @keyframes blink {
+    from {
+      border-color: rgba(75, 131, 255, 1);
+    }
+    to {
+      border-color: transparent;
+    }
+  }
+
+  .text-content {
+    max-width: 100%;
+    justify-items: center;
+  }
+
+  .company-logo {
+    margin-top: 20px;
+    max-width: 80%;
+  }
+}
